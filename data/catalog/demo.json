@@ -1,0 +1,362 @@
+{
+  "schema_version": 1,
+  "balance": "draft",
+  "units": [
+    {
+      "id": "piece",
+      "base_unit": "piece",
+      "scale_integer": 1
+    }
+  ],
+  "items": [
+    {
+      "id": "milk_raw",
+      "name_ru": "milk_raw",
+      "category_id": "demo",
+      "unit_id": "piece",
+      "is_raw": true,
+      "is_tradeable": true,
+      "quality_min": 0,
+      "quality_max": 100,
+      "schema_version": 1
+    },
+    {
+      "id": "glass_sand",
+      "name_ru": "glass_sand",
+      "category_id": "demo",
+      "unit_id": "piece",
+      "is_raw": true,
+      "is_tradeable": true,
+      "quality_min": 0,
+      "quality_max": 100,
+      "schema_version": 1
+    },
+    {
+      "id": "wheat",
+      "name_ru": "wheat",
+      "category_id": "demo",
+      "unit_id": "piece",
+      "is_raw": true,
+      "is_tradeable": true,
+      "quality_min": 0,
+      "quality_max": 100,
+      "schema_version": 1
+    },
+    {
+      "id": "glass",
+      "name_ru": "glass",
+      "category_id": "demo",
+      "unit_id": "piece",
+      "is_raw": false,
+      "is_tradeable": true,
+      "quality_min": 0,
+      "quality_max": 100,
+      "schema_version": 1
+    },
+    {
+      "id": "bottle",
+      "name_ru": "bottle",
+      "category_id": "demo",
+      "unit_id": "piece",
+      "is_raw": false,
+      "is_tradeable": true,
+      "quality_min": 0,
+      "quality_max": 100,
+      "schema_version": 1
+    },
+    {
+      "id": "milk_pack",
+      "name_ru": "milk_pack",
+      "category_id": "demo",
+      "unit_id": "piece",
+      "is_raw": false,
+      "is_tradeable": true,
+      "quality_min": 0,
+      "quality_max": 100,
+      "schema_version": 1
+    },
+    {
+      "id": "flour",
+      "name_ru": "flour",
+      "category_id": "demo",
+      "unit_id": "piece",
+      "is_raw": false,
+      "is_tradeable": true,
+      "quality_min": 0,
+      "quality_max": 100,
+      "schema_version": 1
+    },
+    {
+      "id": "bread",
+      "name_ru": "bread",
+      "category_id": "demo",
+      "unit_id": "piece",
+      "is_raw": false,
+      "is_tradeable": true,
+      "quality_min": 0,
+      "quality_max": 100,
+      "schema_version": 1
+    },
+    {
+      "id": "bag",
+      "name_ru": "bag",
+      "category_id": "demo",
+      "unit_id": "piece",
+      "is_raw": true,
+      "is_tradeable": true,
+      "quality_min": 0,
+      "quality_max": 100,
+      "schema_version": 1
+    },
+    {
+      "id": "bread_pack",
+      "name_ru": "bread_pack",
+      "category_id": "demo",
+      "unit_id": "piece",
+      "is_raw": false,
+      "is_tradeable": true,
+      "quality_min": 0,
+      "quality_max": 100,
+      "schema_version": 1
+    },
+    {
+      "id": "plastic_bottle",
+      "name_ru": "plastic_bottle",
+      "category_id": "demo",
+      "unit_id": "piece",
+      "is_raw": true,
+      "is_tradeable": true,
+      "quality_min": 0,
+      "quality_max": 100,
+      "schema_version": 1
+    }
+  ],
+  "enterprises": [
+    {
+      "id": "glassworks",
+      "allowed_recipe_ids": [
+        "glass_melt"
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "equipment_slots": 1,
+      "zone_type": "industrial"
+    },
+    {
+      "id": "bottleworks",
+      "allowed_recipe_ids": [
+        "bottle_form"
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "equipment_slots": 1,
+      "zone_type": "industrial"
+    },
+    {
+      "id": "dairy",
+      "allowed_recipe_ids": [
+        "milk_glass",
+        "milk_plastic"
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "equipment_slots": 1,
+      "zone_type": "industrial"
+    },
+    {
+      "id": "mill",
+      "allowed_recipe_ids": [
+        "flour_mill"
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "equipment_slots": 1,
+      "zone_type": "industrial"
+    },
+    {
+      "id": "bakery",
+      "allowed_recipe_ids": [
+        "bread_bake",
+        "bread_wrap"
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "equipment_slots": 1,
+      "zone_type": "industrial"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "glass_melt",
+      "enterprise_type_id": "glassworks",
+      "inputs": [
+        {
+          "item_id": "glass_sand",
+          "quantity": 10,
+          "quality_weight": 1
+        }
+      ],
+      "outputs": [
+        {
+          "item_id": "glass",
+          "quantity": 10
+        }
+      ],
+      "duration_ticks": 1,
+      "energy_units": 1,
+      "workers_required": 1,
+      "version": 1
+    },
+    {
+      "id": "bottle_form",
+      "enterprise_type_id": "bottleworks",
+      "inputs": [
+        {
+          "item_id": "glass",
+          "quantity": 10,
+          "quality_weight": 1
+        }
+      ],
+      "outputs": [
+        {
+          "item_id": "bottle",
+          "quantity": 10
+        }
+      ],
+      "duration_ticks": 1,
+      "energy_units": 1,
+      "workers_required": 1,
+      "version": 1
+    },
+    {
+      "id": "milk_glass",
+      "enterprise_type_id": "dairy",
+      "inputs": [
+        {
+          "item_id": "milk_raw",
+          "quantity": 10,
+          "quality_weight": 1
+        },
+        {
+          "item_id": "bottle",
+          "quantity": 10,
+          "quality_weight": 1
+        }
+      ],
+      "outputs": [
+        {
+          "item_id": "milk_pack",
+          "quantity": 10
+        }
+      ],
+      "duration_ticks": 1,
+      "energy_units": 1,
+      "workers_required": 1,
+      "version": 1
+    },
+    {
+      "id": "milk_plastic",
+      "enterprise_type_id": "dairy",
+      "inputs": [
+        {
+          "item_id": "milk_raw",
+          "quantity": 10,
+          "quality_weight": 1
+        },
+        {
+          "item_id": "plastic_bottle",
+          "quantity": 10,
+          "quality_weight": 1
+        }
+      ],
+      "outputs": [
+        {
+          "item_id": "milk_pack",
+          "quantity": 10
+        }
+      ],
+      "duration_ticks": 1,
+      "energy_units": 1,
+      "workers_required": 1,
+      "version": 1
+    },
+    {
+      "id": "flour_mill",
+      "enterprise_type_id": "mill",
+      "inputs": [
+        {
+          "item_id": "wheat",
+          "quantity": 10,
+          "quality_weight": 1
+        }
+      ],
+      "outputs": [
+        {
+          "item_id": "flour",
+          "quantity": 10
+        }
+      ],
+      "duration_ticks": 1,
+      "energy_units": 1,
+      "workers_required": 1,
+      "version": 1
+    },
+    {
+      "id": "bread_bake",
+      "enterprise_type_id": "bakery",
+      "inputs": [
+        {
+          "item_id": "flour",
+          "quantity": 10,
+          "quality_weight": 1
+        }
+      ],
+      "outputs": [
+        {
+          "item_id": "bread",
+          "quantity": 10
+        }
+      ],
+      "duration_ticks": 1,
+      "energy_units": 1,
+      "workers_required": 1,
+      "version": 1
+    },
+    {
+      "id": "bread_wrap",
+      "enterprise_type_id": "bakery",
+      "inputs": [
+        {
+          "item_id": "bread",
+          "quantity": 10,
+          "quality_weight": 1
+        },
+        {
+          "item_id": "bag",
+          "quantity": 10,
+          "quality_weight": 1
+        }
+      ],
+      "outputs": [
+        {
+          "item_id": "bread_pack",
+          "quantity": 10
+        }
+      ],
+      "duration_ticks": 1,
+      "energy_units": 1,
+      "workers_required": 1,
+      "version": 1
+    }
+  ]
+}
